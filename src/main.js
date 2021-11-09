@@ -8,7 +8,9 @@ Vue.config.productionTip = false;
 let data = {
   players: mock,
   mybestplayers: [
-  ]
+  ],
+  compareList: [    
+  ],
 }
 
 new Vue({

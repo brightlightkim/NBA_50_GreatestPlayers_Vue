@@ -1,17 +1,18 @@
 <template>
   <div class="wrapper">
-    <div class="products">
-      <div class="product" v-for="product in products" :key="product.id">
+    <div class="players">
+      <div class="player" v-for="player in players" :key="player.id">
         <div class="info">
-          <h1>{{ product.name }}</h1>
-          <p>{{ product.country }}</p>
+          <h1>{{ player.name }}</h1>
+          <p>{{ player.country }}</p>
         </div>
         <div class="image">
-          <img :src="'/images/products/' + product.image" />
+          <img :src="'/images/players/' + player.image" />
         </div>
         <div class="price">
-          <h2>{{ product.price }}</h2>
-          <button @click="a(product)" class="auto">Add to Cart</button>
+          <h2>{{ player.price }}</h2>
+          <button @click="a(player)" class="auto">Favorite</button>
+          <button @click="compare(player)" class="auto">Compare</button>
         </div>
       </div>
     </div>
@@ -24,19 +25,29 @@
 let id = 0;
 
 export default {
-  name: "ProductList",
+  name: "playerList",
   props: {
-    products: Array,
+    players: Array,
   },
   methods: {
-    a(product) {
+    a(player) {
       id++;
-      this.$root.$data.cart.push({
+      this.$root.$data.mybestplayers.push({
         id: id,
-        name: product.name,
-        price: product.price,
-        country: product.country,
-        image: product.image,
+        name: player.name,
+        price: player.price,
+        country: player.country,
+        image: player.image,
+      });
+    },
+    compare(player){
+      id++;
+      this.$root.$data.compareList.push({
+        id: id,
+        name: player.name,
+        price: player.price,
+        country: player.country,
+        image: player.image,
       });
     },
   },
@@ -50,27 +61,27 @@ export default {
   justify-content: center;
 }
 
-.products {
+.players {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.product {
+.player {
   margin: 10px;
   margin-top: 50px;
   width: 200px;
 }
 
-.product img {
+.player img {
   border: 2px solid #333;
   height: 250px;
   width: 200px;
   object-fit: cover;
 }
 
-.product .image {
+.player .image {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
