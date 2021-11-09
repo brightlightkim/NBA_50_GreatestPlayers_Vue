@@ -16,7 +16,7 @@
         <router-link to="/favorite">
           <div class="menu-item" v-bind:class="favorite">
             <img src="/images/love.png" />
-            <p>{{ numberOfPlayers }} items</p>
+            <p>{{ numberOfPlayers }} Players</p>
           </div>
         </router-link>
       </div>

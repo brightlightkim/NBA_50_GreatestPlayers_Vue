@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <h1>My Best Players</h1>
     <div class="players">
       <div class="player" v-for="player in mybestplayers" :key="player.id">
         <div class="info">
