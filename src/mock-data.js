@@ -1,358 +1,54 @@
-let mock = [{
-    id: 1,
-    name: "Egg Salad",
-    price: "$5.62",
-    country: "United States",
-    image: 'egg-salad.jpg'
-  },
-  {
-    id: 2,
-    name: "Sweet Potato",
-    price: "$2.41",
-    country: "Brazil",
-    image: "sweet-potato.jpg"
-  },
-  {
-    id: 3,
-    name: "Foccacia Bread",
-    price: "$5.92",
-    country: "United States",
-    image: 'focaccia.jpg'
-  },
-  {
-    id: 4,
-    name: "Canned Lotus Rootlets",
-    price: "$3.58",
-    country: "United States",
-    image: 'lotus-rootlets.jpg'
-  },
-  {
-    id: 5,
-    name: "Frilled Toothpicks",
-    price: "$2.47",
-    country: "Canada",
-    image: 'toothpicks.jpg'
-
-  },
-  {
-    id: 6,
-    name: "Rubbed Sage",
-    price: "$8.77",
-    country: "Brazil",
-    image: 'sage-rubbed.jpg'
-  },
-  {
-    id: 7,
-    name: "Langers Mango Nectar",
-    price: "$9.24",
-    country: "Brazil",
-    image: 'mango-nectar.jpg'
-  },
-  {
-    id: 8,
-    name: "Cucumber",
-    price: "$3.02",
-    country: "Canada",
-    image: 'cucumber.jpg'
-  },
-  {
-    id: 9,
-    name: "Fava Beans",
-    price: "$4.76",
-    country: "Brazil",
-    image: 'fava-beans.jpg'
-
-  },
-  {
-    id: 10,
-    name: "Coconut",
-    price: "$2.50",
-    country: "Brazil",
-    image: 'coconut.jpg'
-  },
-  {
-    id: 11,
-    name: "Kettle Potato Chips",
-    price: "$6.70",
-    country: "United States",
-    image: "potato-chips.jpg"
-  },
-  {
-    id: 12,
-    name: "Flour - Rye",
-    price: "$1.14",
-    country: "Canada",
-    image: "rye-flour.jpg"
-  },
-  {
-    id: 13,
-    name: "Feta Chees",
-    price: "$6.92",
-    country: "Brazil",
-    image: "feta-cheese.jpg"
-  },
-  {
-    id: 14,
-    name: "Cheddar Cheese",
-    price: "$5.36",
-    country: "Mexico",
-    image: "cheddar-cheese.jpg"
-  },
-  {
-    id: 15,
-    name: "Capers",
-    price: "$4.18",
-    country: "United States",
-    image: "capers.jpg"
-  },
-  {
-    id: 16,
-    name: "Baguette",
-    price: "$9.18",
-    country: "Mexico",
-    image: "baguette.jpg"
-  },
-  {
-    id: 17,
-    name: "Lasagna Noodles",
-    price: "$4.73",
-    country: "Brazil",
-    image: "lasagna-pasta.jpg"
-  },
-  {
-    id: 18,
-    name: "Pied De Vents Cheese",
-    price: "$5.16",
-    country: "Canada",
-    image: "pied-de-vents.jpg"
-  },
-  {
-    id: 19,
-    name: "Sweet Potato Crackers",
-    price: "$6.81",
-    country: "United States",
-    image: "crackers.jpg"
-  },
-  {
-    id: 20,
-    name: "Mushrooms",
-    price: "$8.62",
-    country: "United States",
-    image: "mushrooms.jpg"
-  },
-  {
-    id: 21,
-    name: "Jerusalem Artichoke",
-    price: "$3.16",
-    country: "United States",
-    image: "jerusalem-artichoke.jpg"
-  },
-  {
-    id: 22,
-    name: "Leather Leaf Fern",
-    price: "$9.41",
-    country: "Brazil",
-    image: "leather-leaf.jpg"
-  },
-  {
-    id: 23,
-    name: "Dried Apricots",
-    price: "$7.42",
-    country: "Brazil",
-    image: "dried-apricots.jpg"
-  },
-  {
-    id: 24,
-    name: "Navel Orange",
-    price: "$3.53",
-    country: "Brazil",
-    image: "navel-orange.jpg"
-  },
-  {
-    id: 25,
-    name: "Sunflower Oil",
-    price: "$1.90",
-    country: "Mexico",
-    image: "sunflower-oil.jpg"
-  },
-  {
-    id: 26,
-    name: "Black Turtle Beans",
-    price: "$4.67",
-    country: "Canada",
-    image: "turtle-beans.jpg"
-  },
-  {
-    id: 27,
-    name: "Bananas",
-    price: "$2.64",
-    country: "Canada",
-    image: "bananas.jpg"
-
-  },
-  {
-    id: 28,
-    name: "Salami",
-    price: "$8.72",
-    country: "Brazil",
-    image: "salami.jpg"
-  },
-  {
-    id: 29,
-    name: "Proscuitto",
-    price: "$9.86",
-    country: "Brazil",
-    image: "proscuitto.jpg"
-  },
-  {
-    id: 30,
-    name: "Cranberries",
-    price: "$5.85",
-    country: "United States",
-    image: "cranberries.jpg"
-
-  },
-  {
-    id: 31,
-    name: "Canteloupe",
-    price: "$4.49",
-    country: "United States",
-    image: "canteloupe.jpg"
-  },
-  {
-    id: 32,
-    name: "Lemon",
-    price: "$2.8Lemon5",
-    country: "United States",
-    image: "lemon.jpg"
-  },
-  {
-    id: 33,
-    name: "Pesto",
-    price: "$2.67",
-    country: "Brazil",
-    image: "pesto.jpg"
-  },
-  {
-    id: 34,
-    name: "Grapefruit Juice",
-    price: "$4.88",
-    country: "Brazil",
-    image: "grapefruit-juice.jpg"
-
-  },
-  {
-    id: 35,
-    name: "Curry Paste",
-    price: "$2.02",
-    country: "Brazil",
-    image: "curry-paste.jpg"
-  },
-  {
-    id: 36,
-    name: "Avocado Oil",
-    price: "$4.45",
-    country: "Canada",
-    image: "avocado-oil.jpg"
-  },
-  {
-    id: 37,
-    name: "Queso Fresco",
-    price: "$9.24",
-    country: "Canada",
-    image: "queso-fresco.jpg"
-  },
-  {
-    id: 38,
-    name: "Key Lime Pie",
-    price: "$5.32",
-    country: "Mexico",
-    image: "key-lime-pie.jpg"
-  },
-  {
-    id: 39,
-    name: "Granny Smith Apple",
-    price: "$2.12",
-    country: "United States",
-    image: "granny-smith.jpg"
-  },
-  {
-    id: 40,
-    name: "Morning Glory Muffin Mix",
-    price: "$9.22",
-    country: "Brazil",
-    image: "muffin-mix.jpg"
-  },
-  {
-    id: 41,
-    name: "Heavy Whipping Cream",
-    price: "$8.78",
-    country: "Brazil",
-    image: 'heavy-cream.jpg'
-  },
-  {
-    id: 42,
-    name: "Red Bell Pepper",
-    price: "$9.03",
-    country: "Brazil",
-    image: 'red-bell-pepper.jpg'
-  },
-  {
-    id: 43,
-    name: "Perrier",
-    price: "$9.36",
-    country: "United States",
-    image: 'perrier.jpg'
-  },
-  {
-    id: 44,
-    name: "Yukon Gold Potatoes",
-    price: "$8.76",
-    country: "Mexico",
-    image: 'yukon-potatoes.jpg'
-  },
-  {
-    id: 45,
-    name: "Salmon Fillets",
-    price: "$6.21",
-    country: "United States",
-    image: 'salmon-fillets.jpg'
-  },
-  {
-    id: 46,
-    name: "Tilapia Fillets",
-    price: "$4.37",
-    country: "Mexico",
-    image: 'tilapia.jpg'
-  },
-  {
-    id: 47,
-    name: "Tomato Pesto",
-    price: "$9.70",
-    country: "Brazil",
-    image: 'tomato-pesto.jpg'
-  },
-  {
-    id: 48,
-    name: "Oil - Olive Bertolli",
-    price: "$8.92",
-    country: "Brazil",
-    image: 'olive-oil.jpg'
-  },
-  {
-    id: 49,
-    name: "Tear Drop Yellow Tomatoes",
-    price: "$3.32",
-    country: "Mexico",
-    image: 'yellow-tomatoes.jpg'
-  },
-  {
-    id: 50,
-    name: "Smoked Paprika",
-    price: "$8.31",
-    country: "Brazil",
-    image: 'smoked-paprika.jpg'
-  }
+let mock = [
+  { name: "Kareem Abdul-Jabbar", position: "C", points: 38.387, rebounds: 17.440, assists: 5.660, championships: "6 (1971, 1980, 1982, 1985, 1987, 1988)", season_mvp: "6 (1971, 1972, 1974, 1976, 1977, 1980)", final_mvp: "2 (1971, 1985)", all_stars: 19, HOF_year: 1995 },
+  { name: "Nate Archibald", position: "G", points: 16.481, rebounds: 2.046, assists: 6.476, championships: "1 (1981)", season_mvp: "None", final_mvp: "None", all_stars: 6, HOF_year: 1991 },
+  { name: "Paul Arizin", position: "F", points: 16.266, rebounds: 6.129, assists: 1.665, championships: "1 (1956)", season_mvp: "None", final_mvp: "None", all_stars: 10, HOF_year: 1978 },
+  { name: "Charles Barkley", position: "F", points: 23.757, rebounds: 12.546, assists: 4.215, championships: "None", season_mvp: "1 (1993)", final_mvp: "None", all_stars: 11, HOF_year: 2006 },
+  { name: "Rick Barry", position: "F", points: 18.395, rebounds: 5.168, assists: 4.017, championships: "1 (1975)", season_mvp: "None", final_mvp: "1 (1975)", all_stars: 8, HOF_year: 1987 },
+  { name: "Elgin Baylor", position: "F", points: 23.149, rebounds: 11.463, assists: 3.650, championships: "None", season_mvp: "None", final_mvp: "None", all_stars: 11, HOF_year: 1977 },
+  { name: "Dave Bing", position: "G", points: 18.327, rebounds: 3.420, assists: 5.397, championships: "None", season_mvp: "None", final_mvp: "None", all_stars: 7, HOF_year: 1990 },
+  { name: "Larry Bird", position: "F", points: 21.791, rebounds: 8.974, assists: 5.695, championships: "3 (1981, 1984, 1986)", season_mvp: "3 (1984, 1985, 1986)", final_mvp: "2 (1984, 1986)", all_stars: 12, HOF_year: 1998 },
+  { name: "Wilt Chamberlain", position: "C", points: 31.419, rebounds: 23.924, assists: 4.643, championships: "2 (1967, 1972)", season_mvp: "4 (1960, 1966, 1967, 1968)", final_mvp: "1 (1972)", all_stars: 13, HOF_year: 1979 },
+  { name: "Bob Cousy", position: "G", points: 16.960, rebounds: 4.786, assists: 6.955, championships: "6 (1957, 1959, 1960, 1961, 1962, 1963)", season_mvp: "1 (1957)", final_mvp: "None", all_stars: 13, HOF_year: 1971 },
+  { name: "Dave Cowens", position: "C", points: 13.516, rebounds: 10.444, assists: 2.910, championships: "2 (1974, 1976)", season_mvp: "1 (1973)", final_mvp: "None", all_stars: 7, HOF_year: 1991 },
+  { name: "Billy Cunningham", position: "F", points: 13.626, rebounds: 6.638, assists: 2.625, championships: "1 (1967)", season_mvp: "None", final_mvp: "None", all_stars: 4, HOF_year: 1986 },
+  { name: "Dave DeBusschere", position: "F", points: 14.053, rebounds: 9.618, assists: 2.497, championships: "2 (1970, 1973)", season_mvp: "None", final_mvp: "None", all_stars: 8, HOF_year: 1983 },
+  { name: "Clyde Drexler", position: "G", points: 22.195, rebounds: 6.677, assists: 6.125, championships: "1 (1995)", season_mvp: "None", final_mvp: "None", all_stars: 10, HOF_year: 2004 },
+  { name: "Julius Erving", position: "F", points: 18.364, rebounds: 5.601, assists: 3.224, championships: "1 (1983)", season_mvp: "1 (1981)", final_mvp: "None", all_stars: 11, HOF_year: 1993 },
+  { name: "Patrick Ewing", position: "C", points: 24.815, rebounds: 11.607, assists: 2.215, championships: "None", season_mvp: "None", final_mvp: "None", all_stars: 11, HOF_year: 2008 },
+  { name: "Walt Frazier", position: "G", points: 15.581, rebounds: 4.830, assists: 5.040, championships: "2 (1970, 1973)", season_mvp: "None", final_mvp: "None", all_stars: 7, HOF_year: 1987 },
+  { name: "George Gervin", position: "G", points: 20.708, rebounds: 3.607, assists: 2.214, championships: "None", season_mvp: "None", final_mvp: "None", all_stars: 9, HOF_year: 1996 },
+  { name: "Hal Greer", position: "G", points: 21.586, rebounds: 5.665, assists: 4.540, championships: "1 (1967)", season_mvp: "None", final_mvp: "None", all_stars: 10, HOF_year: 1982 },
+  { name: "John Havlicek", position: "F/G", points: 26.395, rebounds: 8.007, assists: 6.114, championships: "8 (1963, 1964, 1965, 1966, 1968, 1969, 1974, 1976)", season_mvp: "None", final_mvp: "1 (1974)", all_stars: 13, HOF_year: 1984 },
+  { name: "Elvin Hayes", position: "F/C", points: 27.313, rebounds: 16.279, assists: 2.398, championships: "1 (1978)", season_mvp: "None", final_mvp: "None", all_stars: 12, HOF_year: 1990 },
+  { name: "Magic Johnson", position: "G", points: 17.707, rebounds: 6.559, assists: 10.141, championships: "5 (1980, 1982, 1985, 1987, 1988)", season_mvp: "3 (1987, 1989, 1990)", final_mvp: "3 (1980, 1982, 1987)", all_stars: 12, HOF_year: 2002 },
+  { name: "Sam Jones", position: "G", points: 15.411, rebounds: 4.305, assists: 2.209, championships: "10 (1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1968, 1969)", season_mvp: "None", final_mvp: "None", all_stars: 5, HOF_year: 1984 },
+  { name: "Michael Jordan", position: "G", points: 32.292, rebounds: 6.672, assists: 5.633, championships: "6 (1991, 1992, 1993, 1996, 1997, 1998)", season_mvp: "5 (1988, 1991, 1992, 1996, 1998)", final_mvp: "6 (1991, 1992, 1993, 1996, 1997, 1998)", all_stars: 14, HOF_year: 2009 },
+  { name: "Jerry Lucas", position: "F", points: 14.053, rebounds: 12.942, assists: 2.732, championships: "1 (1973)", season_mvp: "None", final_mvp: "None", all_stars: 7, HOF_year: 1980 },
+  { name: "Karl Malone", position: "F", points: 36.928, rebounds: 14.968, assists: 5.248, championships: "None", season_mvp: "2 (1997, 1999)", final_mvp: "None", all_stars: 14, HOF_year: 2010 },
+  { name: "Moses Malone", position: "C", points: 27.409, rebounds: 16.212, assists: 1.796, championships: "1 (1983)", season_mvp: "3 (1979, 1982, 1983)", final_mvp: "1 (1983)", all_stars: 12, HOF_year: 2001 },
+  { name: "Pete Maravich", position: "G", points: 15.948, rebounds: 2.747, assists: 3.563, championships: "None", season_mvp: "None", final_mvp: "None", all_stars: 5, HOF_year: 1987 },
+  { name: "Kevin McHale", position: "F", points: 17.335, rebounds: 7.122, assists: 1.670, championships: "3 (1981, 1984, 1986)", season_mvp: "None", final_mvp: "None", all_stars: 7, HOF_year: 1999 },
+  { name: "George Mikan", position: "C", points: 10.156, rebounds: 4.167, assists: 1.245, championships: "5 (1949, 1950, 1952, 1953, 1954)", season_mvp: "None", final_mvp: "None", all_stars: 4, HOF_year: 1959 },
+  { name: "Earl Monroe", position: "G", points: 17.454, rebounds: 2.796, assists: 3.594, championships: "1 (1973)", season_mvp: "None", final_mvp: "None", all_stars: 4, HOF_year: 1990 },
+  { name: "Hakeem Olajuwon", position: "C", points: 26.946, rebounds: 13.748, assists: 3.058, championships: "2 (1994, 1995)", season_mvp: "1 (1994)", final_mvp: "2 (1994, 1995)", all_stars: 12, HOF_year: 2008 },
+  { name: "Shaquille O'Neal", position: "C", points: 28.596, rebounds: 13.099, assists: 3.026, championships: "4 (2000, 2001, 2002, 2006)", season_mvp: "1 (2000)", final_mvp: "3 (2000, 2001, 2002)", all_stars: 15, HOF_year: 2016 },
+  { name: "Robert Parish", position: "C", points: 23.334, rebounds: 14.715, assists: 2.180, championships: "4 (1981, 1984, 1986, 1997)", season_mvp: "None", final_mvp: "None", all_stars: 9, HOF_year: 2003 },
+  { name: "Bob Pettit", position: "F", points: 20.880, rebounds: 12.849, assists: 2.369, championships: "1 (1958)", season_mvp: "2 (1956, 1959)", final_mvp: "None", all_stars: 11, HOF_year: 1971 },
+  { name: "Scottie Pippen", position: "F", points: 18.940, rebounds: 7.494, assists: 6.135, championships: "6 (1991, 1992, 1993, 1996, 1997, 1998)", season_mvp: "None", final_mvp: "None", all_stars: 7, HOF_year: 2010 },
+  { name: "Willis Reed", position: "C/F", points: 12.183, rebounds: 8.414, assists: 1.186, championships: "2 (1970, 1973)", season_mvp: "1 (1970)", final_mvp: "2 (1970, 1973)", all_stars: 7, HOF_year: 1982 },
+  { name: "Oscar Robertson", position: "G", points: 26.710, rebounds: 7.804, assists: 9.887, championships: "1 (1971)", season_mvp: "1 (1964)", final_mvp: "None", all_stars: 12, HOF_year: 1980 },
+  { name: "David Robinson", position: "C", points: 20.790, rebounds: 10.497, assists: 2.441, championships: "2 (1999, 2003)", season_mvp: "1 (1995)", final_mvp: "None", all_stars: 10, HOF_year: 2009 },
+  { name: "Bill Russell", position: "C", points: 14.522, rebounds: 21.620, assists: 4.100, championships: "11 (1957, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1968, 1969)", season_mvp: "5 (1958, 1961, 1962, 1963, 1965)", final_mvp: "None", all_stars: 12, HOF_year: 1975 },
+  { name: "Dolph Schayes", position: "F", points: 18.438, rebounds: 11.256, assists: 3.072, championships: "1 (1955)", season_mvp: "None", final_mvp: "None", all_stars: 12, HOF_year: 1973 },
+  { name: "Bill Sharman", position: "G", points: 12.665, rebounds: 2.779, assists: 2.101, championships: "4 (1957, 1959, 1960, 1961)", season_mvp: "None", final_mvp: "None", all_stars: 8, HOF_year: 1976 },
+  { name: "John Stockton", position: "G", points: 19.711, rebounds: 4.051, assists: 15.806, championships: "None", season_mvp: "None", final_mvp: "None", all_stars: 10, HOF_year: 2009 },
+  { name: "Isiah Thomas", position: "G", points: 18.822, rebounds: 3.478, assists: 9.061, championships: "2 (1989, 1990)", season_mvp: "None", final_mvp: "1 (1990)", all_stars: 12, HOF_year: 2000 },
+  { name: "Nate Thurmond", position: "C", points: 14.437, rebounds: 14.464, assists: 2.575, championships: "None", season_mvp: "None", final_mvp: "None", all_stars: 7, HOF_year: 1985 },
+  { name: "Wes Unseld", position: "C", points: 10.624, rebounds: 13.769, assists: 3.822, championships: "1 (1978)", season_mvp: "1 (1969)", final_mvp: "1 (1978)", all_stars: 5, HOF_year: 1988 },
+  { name: "Bill Walton", position: "C", points: 6.215, rebounds: 4.923, assists: 1.590, championships: "2 (1977, 1986)", season_mvp: "1 (1978)", final_mvp: "1 (1977)", all_stars: 2, HOF_year: 1993 },
+  { name: "Jerry West", position: "G", points: 25.192, rebounds: 5.366, assists: 6.238, championships: "1 (1972)", season_mvp: "None", final_mvp: "1 (1969)", all_stars: 14, HOF_year: 1980 },
+  { name: "Lenny Wilkens", position: "G", points: 17.772, rebounds: 5.030, assists: 7.211, championships: "None", season_mvp: "None", final_mvp: "None", all_stars: 9, HOF_year: 1989 },
+  { name: "James Worthy", position: "F", points: 16.320, rebounds: 4.708, assists: 2.791, championships: "3 (1985, 1987, 1988)", season_mvp: "None", final_mvp: "1 (1988)", all_stars: 7, HOF_year: 2003 }
 ]
 
 export default mock;
