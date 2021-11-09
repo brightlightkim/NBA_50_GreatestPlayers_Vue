@@ -4,7 +4,14 @@
       <div class="player" v-for="player in players" :key="player.id">
         <div class="info">
           <h1>{{ player.name }}</h1>
-          <p>{{ player.country }}</p>
+          <p>Points: {{ player.points }}</p>
+          <p>Rebounds: {{ player.rebounds }}</p>
+          <p>Assists: {{ player.assists }}</p>
+          <p>Championships: {{ player.championships }}</p>
+          <p>Season MVP: {{ player.season_mvp }}</p>
+          <p>Final MVP: {{ player.final_mvp }}</p>
+          <p>All Star Times: {{ player.all_stars }}</p>
+          <p>Hall of Fame Year: {{ player.HOF }}</p>
         </div>
         <div class="image">
           <img :src="'/images/players/' + player.image" />
@@ -21,7 +28,6 @@
 
 
 <script>
-
 let id = 0;
 
 export default {
@@ -35,19 +41,31 @@ export default {
       this.$root.$data.mybestplayers.push({
         id: id,
         name: player.name,
-        price: player.price,
-        country: player.country,
         image: player.image,
+        points: player.points,
+        rebounds: player.rebounds,
+        assists: player.assists,
+        championships: player.championships,
+        season_mvp: player.season_mvp,
+        final_mvp: player.final_mvp,
+        all_stars: player.all_stars,
+        HOF: player.HOF,
       });
     },
-    compare(player){
+    compare(player) {
       id++;
       this.$root.$data.compareList.push({
         id: id,
         name: player.name,
-        price: player.price,
-        country: player.country,
         image: player.image,
+        points: player.points,
+        rebounds: player.rebounds,
+        assists: player.assists,
+        championships: player.championships,
+        season_mvp: player.season_mvp,
+        final_mvp: player.final_mvp,
+        all_stars: player.all_stars,
+        HOF: player.HOF,
       });
     },
   },
