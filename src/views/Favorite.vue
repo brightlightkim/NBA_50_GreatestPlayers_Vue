@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
+    <h1>My Best Players</h1>
     <div class="players">
-      <div class="player" v-for="player in players" :key="player.id">
+      <div class="player" v-for="player in mybestplayers" :key="player.id">
         <div class="info">
           <h1>{{ player.name }}</h1>
           <p>Points: {{ player.points }}</p>
@@ -18,62 +19,39 @@
         </div>
         <div class="price">
           <h2>{{ player.price }}</h2>
-          <button @click="a(player)" class="auto" id = "favorite">Favorite</button>
-          <button @click="compare(player)" class="auto" id = "compare">Compare</button>
+          <button @click="a(player)" class="auto">Remove Player</button>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-
 <script>
-let id = 0;
-
 export default {
-  name: "playerList",
-  props: {
-    players: Array,
+  name: "mybestplayerList",
+  
+  data() {
+    return {};
+  },
+  computed: {
+    mybestplayers() {
+      var id = 0;
+      this.$root.$data.mybestplayer.forEach(element => {
+          element.id = id;
+          id++;
+      }); 
+      return this.$root.$data.mybestplayer;
+    },
   },
   methods: {
     a(player) {
-      id++;
-      this.$root.$data.mybestplayers.push({
-        id: id,
-        name: player.name,
-        image: player.image,
-        points: player.points,
-        rebounds: player.rebounds,
-        assists: player.assists,
-        championships: player.championships,
-        season_mvp: player.season_mvp,
-        final_mvp: player.final_mvp,
-        all_stars: player.all_stars,
-        HOF: player.HOF,
-      });
-    },
-    compare(player) {
-      id++;
-      this.$root.$data.compareList.push({
-        id: id,
-        name: player.name,
-        image: player.image,
-        points: player.points,
-        rebounds: player.rebounds,
-        assists: player.assists,
-        championships: player.championships,
-        season_mvp: player.season_mvp,
-        final_mvp: player.final_mvp,
-        all_stars: player.all_stars,
-        HOF: player.HOF,
-      });
+      this.$root.$data.mybestplayer.splice(player.id, 1);
     },
   },
 };
 </script>
 
 <style scoped>
-
 
 @font-face { font-family: 'YanoljaYacheR'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YanoljaYacheR.woff') format('woff'); font-weight: normal; font-style: normal; }
 
@@ -151,19 +129,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 button {
   height: 50px;
-  width: 125px;
+  width: 250px;
   background: #000;
   color: white;
   border: none;
-}
-
-#favorite {
-  background: rgb(255, 252, 79);
-  color: black;
-}
-
-#compare {
-  background: rgb(255, 82, 82);
 }
 
 .auto {
