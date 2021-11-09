@@ -18,8 +18,8 @@
         </div>
         <div class="price">
           <h2>{{ player.price }}</h2>
-          <button @click="a(player)" class="auto">Favorite</button>
-          <button @click="compare(player)" class="auto">Compare</button>
+          <button @click="a(player)" class="auto" id = "favorite">Favorite</button>
+          <button @click="compare(player)" class="auto" id = "compare">Compare</button>
         </div>
       </div>
     </div>
@@ -87,15 +87,16 @@ export default {
 }
 
 .player {
-  margin: 10px;
-  margin-top: 50px;
-  width: 200px;
+  margin: 5px;
+  margin-top: 20px;
+  width: 250px;
+  word-wrap: break-word;
 }
 
 .player img {
   border: 2px solid #333;
   height: 250px;
-  width: 200px;
+  width: 250px;
   object-fit: cover;
 }
 
@@ -106,10 +107,10 @@ export default {
 }
 
 .info {
-  background: #f2921d;
+  background: #ffb964;
   color: #000;
   padding: 10px 30px;
-  height: 80px;
+  height: 250px;
 }
 
 .info h1 {
@@ -122,18 +123,28 @@ export default {
 
 .info p {
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .price {
   display: flex;
+  justify-content: center;
 }
 
 button {
   height: 50px;
+  width: 125px;
   background: #000;
   color: white;
   border: none;
+}
+
+#favorite {
+  background: rgb(94, 94, 255);
+}
+
+#compare {
+  background: rgb(255, 82, 82);
 }
 
 .auto {
