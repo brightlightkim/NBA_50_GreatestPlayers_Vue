@@ -13,10 +13,10 @@
             <p>Browse</p>
           </div>
         </router-link>
-        <router-link to="/cart">
-          <div class="menu-item" v-bind:class="cart">
+        <router-link to="/favorite">
+          <div class="menu-item" v-bind:class="favorite">
             <img src="/images/love.png" />
-            <p>{{ numberOfItems }} items</p>
+            <p>{{ numberOfPlayers }} items</p>
           </div>
         </router-link>
       </div>

@@ -28,7 +28,6 @@
 
 <script>
 export default {
-  name: "mybestplayerList",
   
   data() {
     return {};
@@ -36,16 +35,16 @@ export default {
   computed: {
     mybestplayers() {
       var id = 0;
-      this.$root.$data.mybestplayer.forEach(element => {
+      this.$root.$data.mybestplayers.forEach(element => {
           element.id = id;
           id++;
       }); 
-      return this.$root.$data.mybestplayer;
+      return this.$root.$data.mybestplayers;
     },
   },
   methods: {
     a(player) {
-      this.$root.$data.mybestplayer.splice(player.id, 1);
+      this.$root.$data.mybestplayers.splice(player.id, 1);
     },
   },
 };
