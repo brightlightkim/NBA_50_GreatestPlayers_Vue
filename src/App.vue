@@ -23,7 +23,7 @@
     </div>
     <router-view />
     <div id="footer">
-      <a href="https://github.com/BYUCS260/grocery-store-brightlightkim">GitHub Link</a>
+      <a href="https://github.com/brightlightkim/NBA_50_GreatestPlayers_Vue">GitHub Link</a>
     </div>
   </div>
 </template>
@@ -31,9 +31,9 @@
 <script>
 export default {
   computed: {
-    numberOfItems() {
-      var cartLength = this.$root.$data.cart.length;
-      return cartLength;
+    numberOfPlayers() {
+      var playerNum = this.$root.$data.mybestplayers.length;
+      return playerNum;
     },
   },
 };
