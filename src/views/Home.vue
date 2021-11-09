@@ -13,7 +13,7 @@
 
 
 <script>
-import ProductList from "../components/ProductList.vue";
+import ProductList from "../components/PlayerList.vue";
 export default {
   name: "Home",
   components: {
