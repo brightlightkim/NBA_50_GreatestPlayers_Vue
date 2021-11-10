@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Browse from "../views/Browse.vue";
+import Compare from "../views/Compare.vue";
 import Favorite from "../views/Favorite.vue";
+import Stat from "../views/Stat.vue";
 
 
 Vue.use(VueRouter);
@@ -14,14 +15,19 @@ const routes = [
     component: Home,
   },
   {
-    path: "/browse",
-    name: "Browse",
-    component: Browse,
+    path: "/compare",
+    name: "Compare",
+    component: Compare,
   },
   {
     path: "/favorite",
     name: "Favorite",
     component: Favorite,
+  },
+  {
+    path: "/stat",
+    name: "Stat",
+    component: Stat,
   },
 ];
 

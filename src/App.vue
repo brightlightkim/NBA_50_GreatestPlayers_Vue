@@ -3,28 +3,33 @@
     <div id="menu">
       <div id="brand">
         <router-link to="/">
-          <img src="/images/logo.png" />
+          <img src="/images/greatest_players.jpg" />
         </router-link>
       </div>
       <div id="side">
-        <router-link to="/browse">
-          <div class="menu-item browse">
-            <img src="/images/globe.png" />
-            <p>Browse</p>
+        <router-link to="/stat">
+          <div class="menu-item compare">
+            <img src="/images/stat.png" />
+          </div>
+        </router-link>
+        <router-link to="/compare">
+          <div class="menu-item compare">
+            <img src="/images/vs.jpg" />
+            <p>{{ numberOfCompares }} Players</p>
           </div>
         </router-link>
         <router-link to="/favorite">
-          <div class="menu-item" v-bind:class="favorite">
+          <div class="menu-item" >
             <img src="/images/love.png" />
             <p>{{ numberOfPlayers }} Players</p>
           </div>
         </router-link>
-      </div>
+      </div> 
     </div>
     <router-view />
     <div id="footer">
       <a href="https://github.com/brightlightkim/NBA_50_GreatestPlayers_Vue">GitHub Link</a>
-    </div>
+    </div> 
   </div>
 </template>
 
@@ -35,6 +40,10 @@ export default {
       var playerNum = this.$root.$data.mybestplayers.length;
       return playerNum;
     },
+    numberOfCompares() {
+      var playerNum = this.$root.$data.compareList.length;
+      return playerNum; 
+    }
   },
 };
 </script>
@@ -53,7 +62,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5px;
   grid-template-areas: "none brand side";
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 #menu a {
@@ -64,16 +73,20 @@ body {
   grid-area: brand;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 #brand img {
-  height: 200px;
+  height: auto;
+  width: 600px;
 }
+
 
 #side {
   grid-area: side;
   display: flex;
   justify-content: flex-end;
+
 }
 
 #side img {
@@ -89,13 +102,14 @@ body {
   margin: 0px;
 }
 
-.browse {
-  margin-right: 50px;
+.compare {
+  margin-right: 20px;
 }
 
 #footer {
   position: fixed;
   bottom: 0;
+  left: 0; 
   height: 50px;
   width: 100%;
   display: flex;

@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="wrap">
-      <h1><b>My Favorite Players</b></h1>
+      <h1><b>Compare Legends' Stats and Achievements</b></h1>
     </div>
     <div class="wrapper">
       <div class="players">
-        <div class="player" v-for="player in mybestplayers" :key="player.id">
+        <div class="player" v-for="player in compareList" :key="player.id">
           <div class="info">
             <h1>{{ player.name }}</h1>
             <p>Points: {{ player.points }}</p>
@@ -28,49 +28,50 @@
       </div>
     </div>
     <div class="wrapper">
-      <img src="/images/bestlineup.jpg" />
+      <img src="/images/compare.jpg" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  name: "Compare",
   data() {
     return {};
   },
   computed: {
-    mybestplayers() {
+    compareList() {
       var id = 0;
-      this.$root.$data.mybestplayers.forEach((element) => {
+      this.$root.$data.compareList.forEach((element) => {
         element.id = id;
         id++;
       });
-      return this.$root.$data.mybestplayers;
+      return this.$root.$data.compareList;
     },
   },
   methods: {
     a(player) {
-      this.$root.$data.mybestplayers.splice(player.id, 1);
+      this.$root.$data.compareList.splice(player.id, 1);
     },
   },
 };
 </script>
 
 <style scoped>
-.wrap {
-  text-align: center;
-}
-
-.wrap h1 {
-  color: rgb(95, 95, 255);
-}
-
 @font-face {
   font-family: "YanoljaYacheR";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YanoljaYacheR.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+.wrap {
+  text-align: center;
+}
+
+.wrap h1 {
+  color: rgb(95, 95, 255);
 }
 
 body {
