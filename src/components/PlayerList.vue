@@ -13,8 +13,8 @@
           <p>All Star Times: {{ player.all_stars }}</p>
           <p>Hall of Fame Year: {{ player.HOF }}</p>
         </div>
-        <div class="image">
-          <img :src="'/images/players/' + player.image" />
+        <div class="image"> 
+          <img :src="'./images/players/' + player.image" /> 
         </div>
         <div class="price">
           <h2>{{ player.price }}</h2>
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .player img {
   border: 3px solid #333;
-  height: 250px;
+  height: 500px;
   width: 250px;
   object-fit: cover;
 }

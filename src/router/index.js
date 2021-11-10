@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from '../views/Home.vue';
-import Browse from '../views/Browse.vue';
-import Favorite from '../views/Favorite.vue';
+import Home from "../views/Home.vue";
+import Browse from "../views/Browse.vue";
+import Favorite from "../views/Favorite.vue";
 
 
 Vue.use(VueRouter);
@@ -14,15 +14,15 @@ const routes = [
     component: Home,
   },
   {
-    path: '/browse',
-    name: 'Browse',
+    path: "/browse",
+    name: "Browse",
     component: Browse,
   },
   {
-    path: '/favorite',
-    name: 'Favorite',
+    path: "/favorite",
+    name: "Favorite",
     component: Favorite,
-  }
+  },
 ];
 
 const router = new VueRouter({

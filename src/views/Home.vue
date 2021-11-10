@@ -11,7 +11,6 @@
   </div>
 </template>
 
-
 <script>
 import PlayerList from "../components/PlayerList.vue";
 export default {
@@ -34,7 +33,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 .wrapper {
@@ -69,4 +67,3 @@ input {
   height: 40px;
 }
 </style>
-
